@@ -12,6 +12,7 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
+            flex-direction: column;
         }
         .quiz-container {
             width: 300px;
@@ -27,7 +28,14 @@
         button {
             margin-top: 20px;
         }
+        .chart-container {
+            width: 400px;
+            height: 400px;
+            display: none; /* скрыто до конца теста */
+        }
     </style>
+    <!-- Подключение Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="quiz-container">
@@ -39,6 +47,10 @@
             <label class="option"><input type="radio" name="option" value="4"> Ответ 4</label>
         </div>
         <button onclick="nextQuestion()">Далее</button>
+    </div>
+    <!-- Контейнер для графика -->
+    <div class="chart-container">
+        <canvas id="resultsChart"></canvas>
     </div>
     <script src="script.js"></script>
 </body>
