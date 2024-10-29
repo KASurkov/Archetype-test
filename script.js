@@ -405,18 +405,18 @@ let questions = [
         const selectedOption = document.querySelector('input[name="option"]:checked');
         if (!selectedOption) return alert("Выберите ответ!");
     
-        const isOrphan = questions[currentQuestionIndex].type === "orphan";
-        const isWarrior = questions[currentQuestionIndex].type === "warrior";
-        const isCaregiver = questions[currentQuestionIndex].type === "caregiver";
-        const isSeeker = questions[currentQuestionIndex].type === "seeker";
-        const isDestroyer = questions[currentQuestionIndex].type === "destroyer";
-        const isLover = questions[currentQuestionIndex].type === "lover";
-        const isCreator = questions[currentQuestionIndex].type === "creator";
-        const isRuler = questions[currentQuestionIndex].type === "ruler";
-        const isMagician = questions[currentQuestionIndex].type === "magician";
-        const isSage = questions[currentQuestionIndex].type === "sage";
-        const isFool = questions[currentQuestionIndex].type === "fool";
-        const isInnocent = questions[currentQuestionIndex].type === "innocent";
+        let isOrphan = questions[currentQuestionIndex].type === "orphan";
+        let isWarrior = questions[currentQuestionIndex].type === "warrior";
+        let isCaregiver = questions[currentQuestionIndex].type === "caregiver";
+        let isSeeker = questions[currentQuestionIndex].type === "seeker";
+        let isDestroyer = questions[currentQuestionIndex].type === "destroyer";
+        let isLover = questions[currentQuestionIndex].type === "lover";
+        let isCreator = questions[currentQuestionIndex].type === "creator";
+        let isRuler = questions[currentQuestionIndex].type === "ruler";
+        let isMagician = questions[currentQuestionIndex].type === "magician";
+        let isSage = questions[currentQuestionIndex].type === "sage";
+        let isFool = questions[currentQuestionIndex].type === "fool";
+        let isInnocent = questions[currentQuestionIndex].type === "innocent";
     
         if (isOrphan) {score_orphan += selectedOption.value; isOrphan=false};
         if (isWarrior) {score_warrior += selectedOption.value; isWarrior=false};
