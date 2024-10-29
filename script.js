@@ -70,7 +70,7 @@ function nextQuestion() {
     if (isInnocent) score_innocent += selectedOption.value;
 
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
+    if (currentQuestionIndex < questions.question.length) {
         loadQuestion();
     } else {
         showResults();
