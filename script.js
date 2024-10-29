@@ -408,7 +408,7 @@ let questions = [
         const options = questions[currentQuestionIndex].option;
         optionsContainer.innerHTML = options.map((option, index) => 
             `<label class="option">
-                <input type="radio" name="option" value="${index + 1}"> ${option}
+                <input type="radio" name="option" value="${index + 1}"> ${option} <br>
             </label>`
         ).join('');
     }
