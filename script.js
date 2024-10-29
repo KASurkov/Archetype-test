@@ -195,8 +195,8 @@ let questions = [
         "option": ["Это совсем не про меня", "Изредка это про меня", "Иногда это про меня", "Зачастую это про меня", "Это точно про меня"]
     },
     {
-        "question": "40. Если что-то не так, я не могу сидеть сложа руки и наблюдать со стороны, не пытаясь ничего изменить.",
-        "type": "40. warrior",
+        "question": "Если что-то не так, я не могу сидеть сложа руки и наблюдать со стороны, не пытаясь ничего изменить.",
+        "type": "warrior",
         "option": ["Это совсем не про меня", "Изредка это про меня", "Иногда это про меня", "Зачастую это про меня", "Это точно про меня"]
     },
     {
@@ -418,21 +418,21 @@ let questions = [
         const isFool = questions[currentQuestionIndex].type === "fool";
         const isInnocent = questions[currentQuestionIndex].type === "innocent";
     
-        if (isOrphan) score_orphan += selectedOption.value;
-        if (isWarrior) score_warrior += selectedOption.value;
-        if (isCaregiver) score_caregiver += selectedOption.value;
-        if (isSeeker) score_seeker += selectedOption.value;
-        if (isDestroyer) score_destroyer += selectedOption.value;
-        if (isLover) score_lover += selectedOption.value;
-        if (isCreator) score_creator += selectedOption.value;
-        if (isRuler) score_ruler += selectedOption.value;
-        if (isMagician) score_magician += selectedOption.value;
-        if (isSage) score_sage += selectedOption.value;
-        if (isFool) score_fool += selectedOption.value;
-        if (isInnocent) score_innocent += selectedOption.value;
+        if (isOrphan) {score_orphan += selectedOption.value; isOrphan=false};
+        if (isWarrior) {score_warrior += selectedOption.value; isWarrior=false};
+        if (isCaregiver) {score_caregiver += selectedOption.value; isCaregiver=false};
+        if (isSeeker) {score_seeker += selectedOption.value; isSeeker=false};
+        if (isDestroyer) {score_destroyer += selectedOption.value; isDestroyer=false};
+        if (isLover) {score_lover += selectedOption.value; isLover=false};
+        if (isCreator) {score_creator += selectedOption.value; isCreator=false};
+        if (isRuler) {score_ruler += selectedOption.value; isRuler=false};
+        if (isMagician) {score_magician += selectedOption.value; isMagician=false};
+        if (isSage) {score_sage += selectedOption.value; isSage=false};
+        if (isFool) {score_fool += selectedOption.value; isFool=false};
+        if (isInnocent) {score_innocent += selectedOption.value; isInnocent=false};
     
         currentQuestionIndex++;
-        if (currentQuestionIndex < questions.length) {
+        if (currentQuestionIndex < 11) {
             loadQuestion();
         } else {
             showResults();
