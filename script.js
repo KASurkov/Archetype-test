@@ -444,7 +444,7 @@ let questions = [
         if (isInnocent) {score_innocent += Number(selectedOption.value); isInnocent=Boolean(false)};
     
         currentQuestionIndex++;
-        if (currentQuestionIndex < 11) {
+        if (currentQuestionIndex < questions.length) {
             loadQuestion();
         } else {
             showResults();
