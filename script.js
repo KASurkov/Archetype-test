@@ -373,6 +373,18 @@ let questions = [
     let score_sage = 0;
     let score_fool = 0;
     let score_innocent = 0;
+    let isOrphan = Boolean(false);
+    let isWarrior = Boolean(false);
+    let isCaregiver = Boolean(false);
+    let isSeeker = Boolean(false);
+    let isDestroyer = Boolean(false);
+    let isLover = Boolean(false);
+    let isCreator = Boolean(false);
+    let isRuler = Boolean(false);
+    let isMagician = Boolean(false);
+    let isSage = Boolean(false);
+    let isFool = Boolean(false);
+    let isInnocent = Boolean(false);
     
     // Функция для загрузки вопросов из JSON-файла
     async function loadQuestions() {
@@ -405,31 +417,31 @@ let questions = [
         const selectedOption = document.querySelector('input[name="option"]:checked');
         if (!selectedOption) return alert("Выберите ответ!");
     
-        let isOrphan = questions[currentQuestionIndex].type === "orphan";
-        let isWarrior = questions[currentQuestionIndex].type === "warrior";
-        let isCaregiver = questions[currentQuestionIndex].type === "caregiver";
-        let isSeeker = questions[currentQuestionIndex].type === "seeker";
-        let isDestroyer = questions[currentQuestionIndex].type === "destroyer";
-        let isLover = questions[currentQuestionIndex].type === "lover";
-        let isCreator = questions[currentQuestionIndex].type === "creator";
-        let isRuler = questions[currentQuestionIndex].type === "ruler";
-        let isMagician = questions[currentQuestionIndex].type === "magician";
-        let isSage = questions[currentQuestionIndex].type === "sage";
-        let isFool = questions[currentQuestionIndex].type === "fool";
-        let isInnocent = questions[currentQuestionIndex].type === "innocent";
+        isOrphan = questions[currentQuestionIndex].type === "orphan";
+        isWarrior = questions[currentQuestionIndex].type === "warrior";
+        isCaregiver = questions[currentQuestionIndex].type === "caregiver";
+        isSeeker = questions[currentQuestionIndex].type === "seeker";
+        isDestroyer = questions[currentQuestionIndex].type === "destroyer";
+        isLover = questions[currentQuestionIndex].type === "lover";
+        isCreator = questions[currentQuestionIndex].type === "creator";
+        isRuler = questions[currentQuestionIndex].type === "ruler";
+        isMagician = questions[currentQuestionIndex].type === "magician";
+        isSage = questions[currentQuestionIndex].type === "sage";
+        isFool = questions[currentQuestionIndex].type === "fool";
+        isInnocent = questions[currentQuestionIndex].type === "innocent";
     
-        if (isOrphan) {score_orphan += selectedOption.value; isOrphan=false};
-        if (isWarrior) {score_warrior += selectedOption.value; isWarrior=false};
-        if (isCaregiver) {score_caregiver += selectedOption.value; isCaregiver=false};
-        if (isSeeker) {score_seeker += selectedOption.value; isSeeker=false};
-        if (isDestroyer) {score_destroyer += selectedOption.value; isDestroyer=false};
-        if (isLover) {score_lover += selectedOption.value; isLover=false};
-        if (isCreator) {score_creator += selectedOption.value; isCreator=false};
-        if (isRuler) {score_ruler += selectedOption.value; isRuler=false};
-        if (isMagician) {score_magician += selectedOption.value; isMagician=false};
-        if (isSage) {score_sage += selectedOption.value; isSage=false};
-        if (isFool) {score_fool += selectedOption.value; isFool=false};
-        if (isInnocent) {score_innocent += selectedOption.value; isInnocent=false};
+        if (isOrphan) {score_orphan += Number(selectedOption.value); isOrphan=Boolean(false)};
+        if (isWarrior) {score_warrior += Number(selectedOption.value); isWarrior=Boolean(false)};
+        if (isCaregiver) {score_caregiver += Number(selectedOption.value); isCaregiver=Boolean(false)};
+        if (isSeeker) {score_seeker += Number(selectedOption.value); isSeeker=Boolean(false)};
+        if (isDestroyer) {score_destroyer += Number(selectedOption.value); isDestroyer=Boolean(false)};
+        if (isLover) {score_lover += Number(selectedOption.value); isLover=Boolean(false)};
+        if (isCreator) {score_creator += Number(selectedOption.value); isCreator=Boolean(false)};
+        if (isRuler) {score_ruler += Number(selectedOption.value); isRuler=Boolean(false)};
+        if (isMagician) {score_magician += Number(selectedOption.value); isMagician=Boolean(false)};
+        if (isSage) {score_sage += Number(selectedOption.value); isSage=Boolean(false)};
+        if (isFool) {score_fool += Number(selectedOption.value); isFool=Boolean(false)};
+        if (isInnocent) {score_innocent += Number(selectedOption.value); isInnocent=Boolean(false)};
     
         currentQuestionIndex++;
         if (currentQuestionIndex < 11) {
