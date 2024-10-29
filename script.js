@@ -16,7 +16,7 @@ let score_innocent = 0;
 // Функция для загрузки вопросов из JSON-файла
 async function loadQuestions() {
     try {
-        const response = await fetch('questions.json'); // Загружаем файл questions.json
+        const response = await fetch('Questions.json'); // Загружаем файл questions.json
         if (!response.ok) throw new Error("Не удалось загрузить вопросы");
         
         questions = await response.json(); // Парсим JSON в массив объектов
